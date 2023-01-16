@@ -5,13 +5,15 @@ export default function Home({ items }) {
         <div className="row">
           {items.map((d) => {
             return (
-              <div className="col-3" key={d.id}>
-                <img
-                  src={`/images/${d?.img}`}
-                  className="img-fluid"
-                  alt="..."
-                />
-                <p className="name-item">{d.name?.th}</p>
+              <div className="card-item col-3" key={d.id}>
+                <Link href='/items' passHref={true}>
+                  <img
+                    src={`/images/table.png`}
+                    className="img-fluid"
+                    alt="..."
+                  />
+                  <p className="card-text name-item">{d.name?.th}</p>
+                </Link>
               </div>
             );
           })}
@@ -21,6 +23,7 @@ export default function Home({ items }) {
   );
 }
 
+import Link from "next/link";
 // import ServerSideAuth from "../lib/ServerSideAuth";
 import { dbClient } from "../lib/db";
 
@@ -30,7 +33,7 @@ export async function getServerSideProps({ req, res }) {
   //   return {};
   // }
 
-  const items = await dbClient.query("SELECT * FROM items");
+  const items = await dbClient.query("SELECT * FROM tables");
   return {
     props: {
       items: JSON.parse(JSON.stringify(items?.rows)),
