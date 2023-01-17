@@ -1,11 +1,9 @@
 import { useOrders } from "@/hook/useOrders";
 
-export default function Order() {
-  const orders = useOrders();
-  console.log(orders)
+export default function Order({ orders }) {
   return (
     <>
-      {/* {orders.map((o) => {
+      {orders.map((o) => {
         return (
           <div className="card" key={o.id}>
             <div className="card-body">
@@ -20,7 +18,7 @@ export default function Order() {
             </div>
           </div>
         );
-      })} */}
+      })}
     </>
   );
 }

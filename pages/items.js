@@ -1,8 +1,10 @@
 export default function Item({ items }) {
   const order = useOrders();
-  console.log(order)
+  const router = useRouter();
+  // console.log(router?.query?.table);
+  // console.log(order.orders);
   return (
-    <TempleteOrder>
+    <TempleteOrder orders={order?.orders}>
       <div className=" text-center">
         <div className="row">
           {items.map((d) => {
@@ -29,6 +31,7 @@ export default function Item({ items }) {
 
 import TempleteOrder from "@/components/templete-order";
 import { useOrders } from "@/hook/useOrders";
+import { useRouter } from "next/router";
 
 // import ServerSideAuth from "../lib/ServerSideAuth";
 import { dbClient } from "../lib/db";

@@ -6,7 +6,7 @@ export default function Home({ items }) {
           {items.map((d) => {
             return (
               <div className="card-item col-3" key={d.id}>
-                <Link href='/items' passHref={true}>
+                <Link href={`/items?table=${d.id}`} passHref={true}>
                   <img
                     src={`/images/table.png`}
                     className="img-fluid"
