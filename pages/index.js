@@ -5,12 +5,12 @@ export default function Home({ items }) {
       <div className=" text-center">
         <div className="row">
           <div className="col-12">
-            <button onClick={() => router.push('/items?table=away')} type="button" class="btn btn-primary">
+            <button onClick={() => router.push('/items?table=away')} type="button" className="btn btn-primary">
               กลับบ้าน
             </button>
           </div>
           <div className="col-12">
-            <button onClick={() => router.push('/tables')} type="button" class="btn btn-primary">
+            <button onClick={() => router.push('/tables')} type="button" className="btn btn-primary">
               โต๊ะ
             </button>
           </div>

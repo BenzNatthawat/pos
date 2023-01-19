@@ -7,3 +7,9 @@
 .card-item {
   padding: 0;
 }
+
+.fix-item-image {
+  height: 160px;
+  overflow: hidden;
+  object-fit: cover;
+}

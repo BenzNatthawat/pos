@@ -9,7 +9,7 @@ export default function Order({ orders }) {
             <div className="card-body">
               <img
                 src={`/images/${o?.img}`}
-                classNameName="img-fluid"
+                className="img-fluid"
                 alt="..."
                 width={80}
               />
