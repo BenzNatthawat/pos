@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.3
--- Dumped by pg_dump version 14.3
+-- Dumped from database version 15.1
+-- Dumped by pg_dump version 15.1
 
--- Started on 2023-01-17 17:50:18
+-- Started on 2023-01-21 17:12:23
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,7 +19,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 5 (class 2615 OID 18826)
+-- TOC entry 5 (class 2615 OID 16428)
 -- Name: public; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -29,7 +29,7 @@ CREATE SCHEMA public;
 ALTER SCHEMA public OWNER TO postgres;
 
 --
--- TOC entry 3338 (class 0 OID 0)
+-- TOC entry 3350 (class 0 OID 0)
 -- Dependencies: 5
 -- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -38,7 +38,7 @@ COMMENT ON SCHEMA public IS 'standard public schema';
 
 
 --
--- TOC entry 212 (class 1255 OID 18827)
+-- TOC entry 217 (class 1255 OID 16429)
 -- Name: trigger_set_timestamp(); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -55,7 +55,7 @@ $$;
 ALTER FUNCTION public.trigger_set_timestamp() OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1255 OID 18828)
+-- TOC entry 218 (class 1255 OID 16430)
 -- Name: uuid_generate_v4(); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -71,7 +71,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 211 (class 1259 OID 18851)
+-- TOC entry 214 (class 1259 OID 16431)
 -- Name: category; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -88,7 +88,7 @@ CREATE TABLE public.category (
 ALTER TABLE public.category OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 18829)
+-- TOC entry 215 (class 1259 OID 16439)
 -- Name: items; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -108,7 +108,7 @@ CREATE TABLE public.items (
 ALTER TABLE public.items OWNER TO postgres;
 
 --
--- TOC entry 210 (class 1259 OID 18837)
+-- TOC entry 216 (class 1259 OID 16447)
 -- Name: tables; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -127,8 +127,8 @@ CREATE TABLE public.tables (
 ALTER TABLE public.tables OWNER TO postgres;
 
 --
--- TOC entry 3332 (class 0 OID 18851)
--- Dependencies: 211
+-- TOC entry 3342 (class 0 OID 16431)
+-- Dependencies: 214
 -- Data for Name: category; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -150,47 +150,44 @@ c01daa71-9d9a-4063-b1e8-990ce6a466cc	{"th":"สลัด"}	2023-01-17 17:02:52.8
 
 
 --
--- TOC entry 3330 (class 0 OID 18829)
--- Dependencies: 209
+-- TOC entry 3343 (class 0 OID 16439)
+-- Dependencies: 215
 -- Data for Name: items; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.items (id, name, created_at, updated_at, created_by, updated_by, price, img, category) FROM stdin;
-2450e419-6bfb-49d1-a1e0-8126fc00528f	{"th":"ปลาทับทิมทอดน้ำปลา","en":"Deep-Fried Tilapia Fish with Fish Sauce","rus":"рыба жареная тилапия политая рыбным соусом"}	2023-01-17 17:10:18.166877+07	2023-01-17 17:10:18.166877+07	\N	\N	300	I0004.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87260
-d1760137-d7ce-4ac0-9a4d-2cbdfa9143ce	{"th":"ปลาทับทิมแกงส้ม","en":"Sour curry with Tilapia Fish","rus":"кислый карри с рыба тилапия"}	2023-01-17 17:10:18.321686+07	2023-01-17 17:10:18.321686+07	\N	\N	180	I0011.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87267
-a0e875e2-3727-4801-9be9-f6a16399d022	{"th":"ปลาทับทิมนึ่งซีอิ๋ว","en":"Steamed Tilapia Fish with Soy Sauce","rus":"рыба тилапия на пару в соевом соусе"}	2023-01-17 17:10:18.329474+07	2023-01-17 17:10:18.329474+07	\N	\N	300	I0015.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87271
-cba170ab-d5b6-4bfc-923a-66f4a4a76b9b	{"th":"ปลากระพงผัดพริกไทยดำ","en":"Deep-Fried Sea Bass with Black Pepper","rus":"рыба сибасом жаренная кусочками с пастой Чили"}	2023-01-17 17:10:18.331171+07	2023-01-17 17:10:18.331171+07	\N	\N	200	I0018.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87274
 b9f8b59c-b43d-4538-9219-5c2060c27d1a	{"th":"กุ้งชุปแป้งทอด","en":"Batter-Fried Shrimp","rus":"Жареные креветки"}	2023-01-17 17:10:18.333767+07	2023-01-17 17:10:18.333767+07	\N	\N	150	I0023.jpg	3999a11d-1742-4d57-b605-53af6bf9aba5
 602a3438-410a-4539-81fd-257360037773	{"th":"ทอดมันกุ้ง","en":"Deep-Fried Shrimp Cakes","rus":"Жареные креветки во фритюре"}	2023-01-17 17:10:18.335461+07	2023-01-17 17:10:18.335461+07	\N	\N	180	I0027.jpg	3999a11d-1742-4d57-b605-53af6bf9aba9
-2a1ccbc4-115e-4d16-b462-85be0e7d3ec9	{"th":"ปลากระพงย่าง","en":"Grilled Sea Bass","rus":"снеппер гриль"}	2023-01-17 17:10:18.166334+07	2023-01-17 17:10:18.166334+07	\N	\N	300	I0001.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
-ff2712b2-b5fa-4740-b6df-c6ac18cc43d9	{"th":"ปลาทับทิมราดพริก (น้ำจิ้มแจ๋ว)","en":"Deep-Fried Tilapia Fish with Chili Sauce (Spicy Sauce)","rus":"жаренная рыба тилапия с соусом Чили (острый соус)"}	2023-01-17 17:10:18.321991+07	2023-01-17 17:10:18.321991+07	\N	\N	300	I0013.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87269
-90cc055f-c496-4b49-add4-9824a14eaac6	{"th":"ปลากระพงผัดพริกแกง","en":"Deep-Fried Sea Bass with Curry Paste","rus":"рыба сибасом жаренная кусочками с чёрным перцем"}	2023-01-17 17:10:18.330835+07	2023-01-17 17:10:18.330835+07	\N	\N	200	I0016.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87272
-8baa8e52-323a-492c-85fd-144bbea84f27	{"th":"ปลาทับทิมผัดพริกไทยดำ","en":"Deep-Fried Tilapia Fish with Black Pepper","rus":"рыба тилапия жаренная кусочками с пастой Чили"}	2023-01-17 17:10:18.332349+07	2023-01-17 17:10:18.332349+07	\N	\N	200	I0019.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87275
 8bf81cb5-a3c5-4442-8354-d6213cbafd4a	{"th":"กุ้งทอดกระเทียม","en":"Shrimp Fried with Garlic","rus":"креветки жаренные с чесноком"}	2023-01-17 17:10:18.333808+07	2023-01-17 17:10:18.333808+07	\N	\N	150	I0024.jpg	3999a11d-1742-4d57-b605-53af6bf9aba6
 e235b2a3-b4cb-4875-8c8d-d68ebf0c0c2f	{"th":"กุ้งอบวุ้นเส้น","en":"Baked Shrimp with Glass Noodles","rus":"Запеченные креветки со стеклянной лапшой"}	2023-01-17 17:10:18.335207+07	2023-01-17 17:10:18.335207+07	\N	\N	180	I0026.jpg	3999a11d-1742-4d57-b605-53af6bf9aba8
-0ab637ef-3547-476e-90a4-16b4cd189918	{"th":"ปลาทับทิมทอดกระเทียม","en":"Deep-Fried Tilapia Fish with Garlic","rus":"рыба жареная тилапия с чесноком"}	2023-01-17 17:10:18.322666+07	2023-01-17 17:10:18.322666+07	\N	\N	300	I0006.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87262
-985171e2-9c21-410e-af0c-6906d87ad8f3	{"th":"ปลากระพงทอดกระเทียม","en":"Deep-Fried Sea Bass with Garlic","rus":"рыба жаренная снеппер с чесноком"}	2023-01-17 17:10:18.322646+07	2023-01-17 17:10:18.322646+07	\N	\N	300	I0005.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87261
 0dfc2222-d741-488c-a42e-6e31d6c5741e	{"th":"ปลาหมึกย่าง","en":"Grilled Squid","rus":"кальмар-гриль"}	2023-01-17 17:10:18.344243+07	2023-01-17 17:10:18.344243+07	\N	\N	250	I0035.jpg	c53e517a-fdcc-4243-99fe-2c2e24ad03d2
 4f392859-71b0-44a9-8489-941d179b405d	{"th":"ปลาหมึกผัดพริกไทยดำ","en":"Stir-Fried Squid with Black Pepper","rus":"кальмар жареный с черным перцем"}	2023-01-17 17:10:18.362074+07	2023-01-17 17:10:18.362074+07	\N	\N	150	I0042.jpg	c53e517a-fdcc-4243-99fe-2c2e24ad03d9
 a28ada98-2977-4c25-89ed-35799242198b	{"th":"ปูผัดน้ำพริกเผา","en":"Stir-Fried Crab with Chili Paste","rus":"жаренный краб с пастой Чили"}	2023-01-17 17:10:18.364966+07	2023-01-17 17:10:18.364966+07	\N	\N	250	I0050.jpg	0713a651-3e07-49e0-91b3-1718b0c7a9a4
 13bdcc47-ef5e-489e-aa7d-2439543ea52d	{"th":"ไก่ทอดกระเทียม","en":"Chicken Fried with Garlic","rus":"курица жаренная с чесноком"}	2023-01-17 17:10:18.372095+07	2023-01-17 17:10:18.372095+07	\N	\N	150	I0055.jpg	c130da5b-54e8-4fe4-ba8a-424dd9ccb2a9
-0206f13b-59cc-412b-ade7-aac668481ac8	{"th":"ปลากระพงแกงส้ม","en":"Sour curry with Sea Bass","rus":"Кислое карри с рыба сибасом"}	2023-01-17 17:10:18.324582+07	2023-01-17 17:10:18.324582+07	\N	\N	180	I0010.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87266
 5635df55-0445-4944-a30d-4e62a2e3e8fe	{"th":"ปลาหมึกผัดไข่เค็ม","en":"Stir-Fried Squid with Salted Egg","rus":"Жареный кальмар с соленым яйцом"}	2023-01-17 17:10:18.360769+07	2023-01-17 17:10:18.360769+07	\N	\N	150	I0039.jpg	c53e517a-fdcc-4243-99fe-2c2e24ad03d6
 68c77c60-41c1-4c36-9d12-81c990836f3c	{"th":"ปูเผา","en":"Grilled Crab","rus":"краб-гриль"}	2023-01-17 17:10:18.364506+07	2023-01-17 17:10:18.364506+07	\N	\N	200	I0047.jpg	0713a651-3e07-49e0-91b3-1718b0c7a9a1
 4a6da273-7a39-4c3d-ab17-63e2d81e58fc	{"th":"ไก่ผัดกระเพรา","en":"Stir-Fried Chicken with Basil","rus":"курица жареная с базиликом"}	2023-01-17 17:10:18.371741+07	2023-01-17 17:10:18.371741+07	\N	\N	150	I0054.jpg	c130da5b-54e8-4fe4-ba8a-424dd9ccb2a8
-0af56221-218e-499d-b04e-02d691d7df6f	{"th":"ปลาทับทิมนึ่งมะนาว","en":"Steamed Tilapia Fish with Lime Sauce","rus":"рыба жареная тилапия на пару с лимоном"}	2023-01-17 17:10:18.323411+07	2023-01-17 17:10:18.323411+07	\N	\N	300	I0008.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87264
 7189f45c-be69-4d9b-8ee1-2a47b1118363	{"th":"ปลาหมึกผัดผงกะหรี่","en":"Stir-Fried Squid with Curry Powder","rus":"кальмар жаренный с карри-мукой"}	2023-01-17 17:10:18.361287+07	2023-01-17 17:10:18.361287+07	\N	\N	150	I0040.jpg	c53e517a-fdcc-4243-99fe-2c2e24ad03d7
 9047ab35-0eab-4752-8c10-48634d45a109	{"th":"ปูผัดผงกะหรี่","en":"Stir-Fried Crab with Curry Powder","rus":"жаренный краб с карри-мукой"}	2023-01-17 17:10:18.364806+07	2023-01-17 17:10:18.364806+07	\N	\N	250	I0049.jpg	0713a651-3e07-49e0-91b3-1718b0c7a9a3
-c4618387-058f-4ead-9ee4-b91322bed35e	{"th":"ปลากระพงสามรส","en":"Deep-Fried Sea Bass with 3 types of sauce (Sweet, Sour, Spicy Mixture) sauce can be separately","rus":"рыба жаренная снеппер с 3 видами соуса (сладкий,кислый,острый смесь) соус можно отдельно"}	2023-01-17 17:10:18.323902+07	2023-01-17 17:10:18.323902+07	\N	\N	300	I0009.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87265
 3b72efe4-c5ce-4094-ae46-c102e32db055	{"th":"ปลาหมึกผัดพริกเผา","en":"Stir-Fried Squid with Chili Paste","rus":"кальмар жаренный с Соус-чили"}	2023-01-17 17:10:18.361694+07	2023-01-17 17:10:18.361694+07	\N	\N	150	I0041.jpg	c53e517a-fdcc-4243-99fe-2c2e24ad03d8
 26a34f58-c03c-426b-926a-e0732e196d43	{"th":"ปูผัดพริกไทยดำ","en":"Stir-Fried Crab with Black Pepper","rus":"краб жаренный с чёрным перцем"}	2023-01-17 17:10:18.364615+07	2023-01-17 17:10:18.364615+07	\N	\N	250	I0048.jpg	0713a651-3e07-49e0-91b3-1718b0c7a9a2
 dff87acb-8d69-4168-9080-111b6a4c9ed4	{"th":"ผัดผัก","en":"Stir-Fried Mix Vegetables","rus":"Жареная смесь овощей"}	2023-01-17 17:10:18.402321+07	2023-01-17 17:10:18.402321+07	\N	\N	100	I0066.jpg	5d3c3b89-7266-4ebe-b8d8-0d9f0f951cc5
+dcd59053-596e-4608-b303-73a2cda99215	{"th":"ข้าวผัดไก่","en":"Fried Rice with Chicken","rus":"жареный рис с курицей"}	2023-01-17 17:10:19.136134+07	2023-01-17 17:10:19.136134+07	\N	\N	120	I0080.jpg	4e98d66f-1d85-45c0-b7d4-e8a396eaf633
+985171e2-9c21-410e-af0c-6906d87ad8f3	{"th":"ปลากระพงทอดกระเทียม","en":"Deep-Fried Sea Bass with Garlic","rus":"рыба жаренная снеппер с чесноком"}	2023-01-17 17:10:18.322646+07	2023-01-18 22:29:35.827888+07	\N	\N	300	I0005.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+0ab637ef-3547-476e-90a4-16b4cd189918	{"th":"ปลาทับทิมทอดกระเทียม","en":"Deep-Fried Tilapia Fish with Garlic","rus":"рыба жареная тилапия с чесноком"}	2023-01-17 17:10:18.322666+07	2023-01-18 22:29:35.829144+07	\N	\N	300	I0006.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+0af56221-218e-499d-b04e-02d691d7df6f	{"th":"ปลาทับทิมนึ่งมะนาว","en":"Steamed Tilapia Fish with Lime Sauce","rus":"рыба жареная тилапия на пару с лимоном"}	2023-01-17 17:10:18.323411+07	2023-01-18 22:29:35.831546+07	\N	\N	300	I0008.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+c4618387-058f-4ead-9ee4-b91322bed35e	{"th":"ปลากระพงสามรส","en":"Deep-Fried Sea Bass with 3 types of sauce (Sweet, Sour, Spicy Mixture) sauce can be separately","rus":"рыба жаренная снеппер с 3 видами соуса (сладкий,кислый,острый смесь) соус можно отдельно"}	2023-01-17 17:10:18.323902+07	2023-01-18 22:29:35.833165+07	\N	\N	300	I0009.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+0206f13b-59cc-412b-ade7-aac668481ac8	{"th":"ปลากระพงแกงส้ม","en":"Sour curry with Sea Bass","rus":"Кислое карри с рыба сибасом"}	2023-01-17 17:10:18.324582+07	2023-01-18 22:29:35.835069+07	\N	\N	180	I0010.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+d1760137-d7ce-4ac0-9a4d-2cbdfa9143ce	{"th":"ปลาทับทิมแกงส้ม","en":"Sour curry with Tilapia Fish","rus":"кислый карри с рыба тилапия"}	2023-01-17 17:10:18.321686+07	2023-01-18 22:29:35.836427+07	\N	\N	180	I0011.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+ff2712b2-b5fa-4740-b6df-c6ac18cc43d9	{"th":"ปลาทับทิมราดพริก (น้ำจิ้มแจ๋ว)","en":"Deep-Fried Tilapia Fish with Chili Sauce (Spicy Sauce)","rus":"жаренная рыба тилапия с соусом Чили (острый соус)"}	2023-01-17 17:10:18.321991+07	2023-01-18 22:29:35.839061+07	\N	\N	300	I0013.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+a0e875e2-3727-4801-9be9-f6a16399d022	{"th":"ปลาทับทิมนึ่งซีอิ๋ว","en":"Steamed Tilapia Fish with Soy Sauce","rus":"рыба тилапия на пару в соевом соусе"}	2023-01-17 17:10:18.329474+07	2023-01-18 22:29:35.841442+07	\N	\N	300	I0015.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+90cc055f-c496-4b49-add4-9824a14eaac6	{"th":"ปลากระพงผัดพริกแกง","en":"Deep-Fried Sea Bass with Curry Paste","rus":"рыба сибасом жаренная кусочками с чёрным перцем"}	2023-01-17 17:10:18.330835+07	2023-01-18 22:29:35.842586+07	\N	\N	200	I0016.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+cba170ab-d5b6-4bfc-923a-66f4a4a76b9b	{"th":"ปลากระพงผัดพริกไทยดำ","en":"Deep-Fried Sea Bass with Black Pepper","rus":"рыба сибасом жаренная кусочками с пастой Чили"}	2023-01-17 17:10:18.331171+07	2023-01-18 22:29:35.845163+07	\N	\N	200	I0018.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+8baa8e52-323a-492c-85fd-144bbea84f27	{"th":"ปลาทับทิมผัดพริกไทยดำ","en":"Deep-Fried Tilapia Fish with Black Pepper","rus":"рыба тилапия жаренная кусочками с пастой Чили"}	2023-01-17 17:10:18.332349+07	2023-01-18 22:29:35.846483+07	\N	\N	200	I0019.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
 1818183a-534d-4b9a-9767-d4912c196c51	{"th":"ผัดเห็ดเข็มทอง","en":"Stir-Fried White Mushrooms (Golden Needle)","rus":"жаренные мелкие местные белые грибы(золотая игла)"}	2023-01-17 17:10:18.40599+07	2023-01-17 17:10:18.40599+07	\N	\N	100	I0067.jpg	5d3c3b89-7266-4ebe-b8d8-0d9f0f951cc6
 c30b4934-9aab-4392-875e-5e82de988d31	{"th":"ผัดผักกระเฉดไฟแดง","en":"Stir-Fried Mimosa (On High Heat)","rus":"Жареная мимоза (на сильном огне)"}	2023-01-17 17:10:18.408441+07	2023-01-17 17:10:18.408441+07	\N	\N	100	I0068.jpg	5d3c3b89-7266-4ebe-b8d8-0d9f0f951cc7
 47aa84a5-95c0-4550-b52d-aa10905883bd	{"th":"ผัดผักบุ้งไฟแดง","en":"Stir-Fried Morning-Glory (On High Heat)","rus":"Жареная ипомея (на сильном огне)"}	2023-01-17 17:10:18.409985+07	2023-01-17 17:10:18.409985+07	\N	\N	100	I0069.jpg	5d3c3b89-7266-4ebe-b8d8-0d9f0f951cc8
 dbf20313-dc60-4eb3-900a-258b1c462b3a	{"th":"ผัดคะน้ากุ้งสด","en":"Stir-Fried Chinese Cabbage with Shrimp","rus":"жаренная китайская капуста с креветками"}	2023-01-17 17:10:18.411326+07	2023-01-17 17:10:18.411326+07	\N	\N	100	I0070.jpg	5d3c3b89-7266-4ebe-b8d8-0d9f0f951cc9
-57cf4356-ed26-4a5b-8a99-0544a824117f	{"th":"ปลากระพงนึ่งมะนาว","en":"Steamed Sea Bass with Lime Sauce","rus":"рыба жаренная снеппер на пару с лимономэ "}	2023-01-17 17:10:18.321475+07	2023-01-17 17:10:18.321475+07	\N	\N	300	I0007.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87263
-2df7bd15-d7f1-4276-97c0-29d49d2e6b7c	{"th":"ปลากระพงทอดน้ำปลา","en":"Deep-Fried Sea Bass with Fish Sauce","rus":"рыба жаренная снеппер политая рыбным соусом"}	2023-01-17 17:10:18.322965+07	2023-01-17 17:10:18.322965+07	\N	\N	300	I0003.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87259
 c1fe9c95-fc99-492c-9031-014b14ee38f6	{"th":"ปูนึ่ง","en":"Steamed Crab","rus":"краб на пару"}	2023-01-17 17:10:18.364393+07	2023-01-17 17:10:18.364393+07	\N	\N	200	I0046.jpg	0713a651-3e07-49e0-91b3-1718b0c7a9a0
 03cc6a71-f004-44a1-b92b-9978e1085b93	{"th":"ปลาหมึกนึ่งมะนาว","en":"Steamed Squid with Lime Sauce","rus":"кальмар на пару с лимоном"}	2023-01-17 17:10:18.568193+07	2023-01-17 17:10:18.568193+07	\N	\N	180	I0037.jpg	c53e517a-fdcc-4243-99fe-2c2e24ad03d4
 a04e9f5e-b1ec-4c1b-8831-5622834afc64	{"th":"ปลาหมึกทอดกระเทียม","en":"Fried Squid with Garlic","rus":"кальмар-гриль с чесноком"}	2023-01-17 17:10:18.768754+07	2023-01-17 17:10:18.768754+07	\N	\N	150	I0036.jpg	c53e517a-fdcc-4243-99fe-2c2e24ad03d3
@@ -217,7 +214,7 @@ c70b5dd9-adec-4f73-a146-2cb042836d1c	{"th":"น้ำมะนาวปั่น
 d549c00c-f045-47b3-b931-110d4e4b66e9	{"th":"สลัดกุ้ง","en":"Shrimp Salad","rus":"Салат с креветками"}	2023-01-17 17:10:19.441835+07	2023-01-17 17:10:19.441835+07	\N	\N	120	I0155.jpg	c01daa71-9d9a-4063-b1e8-990ce6a466cc
 5542921f-2be3-4dc9-b7af-653868b0237e	{"th":"สลัดซีซาร์","en":"Caesar salad","rus":"Салат Цезарь"}	2023-01-17 17:10:19.444267+07	2023-01-17 17:10:19.444267+07	\N	\N	100	I0160.jpg	c01daa71-9d9a-4063-b1e8-990ce6a466cc
 cc5316c0-8e57-41c6-990a-9295ed0a1244	{"th":"ไข่เจียวซีฟู้ด","en":"seafood Omelet","rus":"омлет из морепродуктов"}	2023-01-17 17:10:19.445758+07	2023-01-17 17:10:19.445758+07	\N	\N	150	I0168.jpg	b724b023-2ae3-4b39-9e83-9550f96b4c6b
-dcd59053-596e-4608-b303-73a2cda99215	{"th":"ข้าวผัดไก่","en":"Fried Rice with Chicken","rus":"жареный рис с курицей"}	2023-01-17 17:10:19.136134+07	2023-01-17 17:10:19.136134+07	\N	\N	120	I0080.jpg	4e98d66f-1d85-45c0-b7d4-e8a396eaf633
+57cf4356-ed26-4a5b-8a99-0544a824117f	{"th":"ปลากระพงนึ่งมะนาว","en":"Steamed Sea Bass with Lime Sauce","rus":"рыба жаренная снеппер на пару с лимономэ "}	2023-01-17 17:10:18.321475+07	2023-01-18 22:29:35.830374+07	\N	\N	300	I0007.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
 fda8cdb8-b375-4d36-84b5-6deb8aed36a7	{"th":"ยำผักกูด","en":"Spicy Vegetable Salad","rus":"острый овощной салат"}	2023-01-17 17:10:19.230389+07	2023-01-17 17:10:19.230389+07	\N	\N	150	I0107.jpg	7b0d218c-ff61-4c0e-8f6f-9fbcb9b1ff2f
 931f0925-440e-40ff-99dc-c43e252518fc	{"th":"ยำมะม่วง","en":"Mango Salad","rus":"салат из манго"}	2023-01-17 17:10:19.281461+07	2023-01-17 17:10:19.281461+07	\N	\N	120	I0109.jpg	7b0d218c-ff61-4c0e-8f6f-9fbcb9b1ff2f
 91f817fb-0fcb-4972-98e2-ddab76ab1005	{"th":"ขนมปังทอดกระเทียม","en":"Garlic Bread","rus":"чесночный хлеб"}	2023-01-17 17:10:19.386566+07	2023-01-17 17:10:19.386566+07	\N	\N	100	I0115.jpg	03d4d56b-3874-46f3-9b48-6e25a79c046b
@@ -263,27 +260,31 @@ f327a8f2-a51b-4364-a946-15d320c73a8c	{"th":"ซุปเห็ด","en":"Mushroo
 55f9879c-8a46-41e9-ab1f-45b264a3d6e4	{"th":"น้ำมะพร้าวปั่น","en":"Coconut Smoothie","rus":"шейк-кокос"}	2023-01-17 17:10:19.605312+07	2023-01-17 17:10:19.605312+07	\N	\N	80	I0129.jpg	ed758bfd-8938-42f7-bd04-2bd5ffd56d29
 d7056050-4e68-495a-bb2d-d7bc26545985	{"th":"ซุุปข้าวโพด","en":"Corn Cream Soup","rus":"кукурузный крем-суп"}	2023-01-17 17:10:19.60253+07	2023-01-17 17:10:19.60253+07	\N	\N	120	I0121.jpg	03d4d56b-3874-46f3-9b48-6e25a79c046b
 d945566e-6aab-4d7f-aad3-8e7332e74b9b	{"th":"น้ำมะพร้าว","en":"Coconut Water","rus":"кокос"}	2023-01-17 17:10:19.60231+07	2023-01-17 17:10:19.60231+07	\N	\N	60	I0128.jpg	ed758bfd-8938-42f7-bd04-2bd5ffd56d28
-59d72c60-f117-4e41-9dd7-8a7e73acc234	{"th":"ปลาทับทิมย่าง","en":"Grilled Tilapia Fish","rus":"Тилапия рыба гриль"}	2023-01-17 17:10:18.166772+07	2023-01-17 17:10:18.166772+07	\N	\N	300	I0002.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87258
-a79a392a-5c27-47ff-a5ec-c78eb4c44763	{"th":"ปลากระพงราดพริก (น้ำจิ้มแจ๋ว)","en":"Deep-Fried fish with Sea Bass with chili sauce (Spicy Sauce)","rus":"жаренная рыба сибасом с соусом Чили (острый соус)"}	2023-01-17 17:10:18.321875+07	2023-01-17 17:10:18.321875+07	\N	\N	300	I0012.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87268
-a100cd86-587c-4316-a3dd-ec1299ada59e	{"th":"ปลากระพงนึ่งซีอิ๋ว","en":"Steamed Sea Bass with Soy Sauce","rus":"рыба сибасом на пару в соевом соусе"}	2023-01-17 17:10:18.327676+07	2023-01-17 17:10:18.327676+07	\N	\N	300	I0014.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87270
-daa8566d-8f2b-48de-a97e-e4d86bec7f13	{"th":"ปลาทับทิมผัดพริกแกง","en":"Deep-Fried Tilapia Fish with Curry Paste","rus":"рыба тилапия жаренная кусочками с чёрным перцем"}	2023-01-17 17:10:18.330959+07	2023-01-17 17:10:18.330959+07	\N	\N	200	I0017.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87273
 1dbb40c6-5d67-4525-b983-904be2424192	{"th":"กุ้งเผา","en":"Grilled Shrimp","rus":"креветки-гриль"}	2023-01-17 17:10:18.332753+07	2023-01-17 17:10:18.332753+07	\N	\N	350	I0022.jpg	3999a11d-1742-4d57-b605-53af6bf9aba4
 9f5095c3-8adb-4a8d-b21f-3f1e8f9ae412	{"th":"กุ้งอบเกลือ","en":"Shrimp Baked with Salt","rus":"креветки запечённые в соли"}	2023-01-17 17:10:18.334043+07	2023-01-17 17:10:18.334043+07	\N	\N	150	I0025.jpg	3999a11d-1742-4d57-b605-53af6bf9aba7
+2a1ccbc4-115e-4d16-b462-85be0e7d3ec9	{"th":"ปลากระพงย่าง","en":"Grilled Sea Bass","rus":"снеппер гриль"}	2023-01-17 17:10:18.166334+07	2023-01-18 22:29:35.756529+07	\N	\N	300	I0001.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+59d72c60-f117-4e41-9dd7-8a7e73acc234	{"th":"ปลาทับทิมย่าง","en":"Grilled Tilapia Fish","rus":"Тилапия рыба гриль"}	2023-01-17 17:10:18.166772+07	2023-01-18 22:29:35.823774+07	\N	\N	300	I0002.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+2df7bd15-d7f1-4276-97c0-29d49d2e6b7c	{"th":"ปลากระพงทอดน้ำปลา","en":"Deep-Fried Sea Bass with Fish Sauce","rus":"рыба жаренная снеппер политая рыбным соусом"}	2023-01-17 17:10:18.322965+07	2023-01-18 22:29:35.825247+07	\N	\N	300	I0003.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+2450e419-6bfb-49d1-a1e0-8126fc00528f	{"th":"ปลาทับทิมทอดน้ำปลา","en":"Deep-Fried Tilapia Fish with Fish Sauce","rus":"рыба жареная тилапия политая рыбным соусом"}	2023-01-17 17:10:18.166877+07	2023-01-18 22:29:35.826564+07	\N	\N	300	I0004.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+a79a392a-5c27-47ff-a5ec-c78eb4c44763	{"th":"ปลากระพงราดพริก (น้ำจิ้มแจ๋ว)","en":"Deep-Fried fish with Sea Bass with chili sauce (Spicy Sauce)","rus":"жаренная рыба сибасом с соусом Чили (острый соус)"}	2023-01-17 17:10:18.321875+07	2023-01-18 22:29:35.83782+07	\N	\N	300	I0012.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+a100cd86-587c-4316-a3dd-ec1299ada59e	{"th":"ปลากระพงนึ่งซีอิ๋ว","en":"Steamed Sea Bass with Soy Sauce","rus":"рыба сибасом на пару в соевом соусе"}	2023-01-17 17:10:18.327676+07	2023-01-18 22:29:35.840434+07	\N	\N	300	I0014.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
+daa8566d-8f2b-48de-a97e-e4d86bec7f13	{"th":"ปลาทับทิมผัดพริกแกง","en":"Deep-Fried Tilapia Fish with Curry Paste","rus":"рыба тилапия жаренная кусочками с чёрным перцем"}	2023-01-17 17:10:18.330959+07	2023-01-18 22:29:35.843868+07	\N	\N	200	I0017.jpg	75c7578d-cf43-45c7-8d5d-62dfd4e87257
 \.
 
 
 --
--- TOC entry 3331 (class 0 OID 18837)
--- Dependencies: 210
+-- TOC entry 3344 (class 0 OID 16447)
+-- Dependencies: 216
 -- Data for Name: tables; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.tables (id, name, img, quantity, created_at, updated_at, created_by, updated_by) FROM stdin;
+d1930377-4520-4a1d-8f02-c4ad3971838f	A1	table.png	\N	2023-01-17 17:58:34.865597+07	2023-01-17 17:58:34.865597+07	\N	\N
 \.
 
 
 --
--- TOC entry 3187 (class 2606 OID 18860)
+-- TOC entry 3192 (class 2606 OID 16456)
 -- Name: category category_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -292,7 +293,7 @@ ALTER TABLE ONLY public.category
 
 
 --
--- TOC entry 3183 (class 2606 OID 18846)
+-- TOC entry 3194 (class 2606 OID 16458)
 -- Name: items items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -301,7 +302,7 @@ ALTER TABLE ONLY public.items
 
 
 --
--- TOC entry 3185 (class 2606 OID 18848)
+-- TOC entry 3196 (class 2606 OID 16460)
 -- Name: tables tables_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -310,7 +311,7 @@ ALTER TABLE ONLY public.tables
 
 
 --
--- TOC entry 3190 (class 2620 OID 18861)
+-- TOC entry 3197 (class 2620 OID 16461)
 -- Name: category set_timestamp; Type: TRIGGER; Schema: public; Owner: postgres
 --
 
@@ -318,7 +319,7 @@ CREATE TRIGGER set_timestamp BEFORE UPDATE ON public.category FOR EACH ROW EXECU
 
 
 --
--- TOC entry 3188 (class 2620 OID 18849)
+-- TOC entry 3198 (class 2620 OID 16462)
 -- Name: items set_timestamp; Type: TRIGGER; Schema: public; Owner: postgres
 --
 
@@ -326,14 +327,23 @@ CREATE TRIGGER set_timestamp BEFORE UPDATE ON public.items FOR EACH ROW EXECUTE 
 
 
 --
--- TOC entry 3189 (class 2620 OID 18850)
+-- TOC entry 3199 (class 2620 OID 16463)
 -- Name: tables set_timestamp; Type: TRIGGER; Schema: public; Owner: postgres
 --
 
 CREATE TRIGGER set_timestamp BEFORE UPDATE ON public.tables FOR EACH ROW EXECUTE FUNCTION public.trigger_set_timestamp();
 
 
--- Completed on 2023-01-17 17:50:18
+--
+-- TOC entry 3351 (class 0 OID 0)
+-- Dependencies: 5
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE USAGE ON SCHEMA public FROM PUBLIC;
+
+
+-- Completed on 2023-01-21 17:12:23
 
 --
 -- PostgreSQL database dump complete
