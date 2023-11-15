@@ -1,6 +1,5 @@
-// add bootstrap css
 import "bootstrap/dist/css/bootstrap.css";
-// own css files here
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/customscss.scss";
 
 import Head from "next/head";

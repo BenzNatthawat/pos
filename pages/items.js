@@ -1,19 +1,69 @@
-export default function Item({ items, category }) {
-  const order = useOrders();
-  const categoryActive = useCategory()
-  const router = useRouter();
+import { useCategory } from "@/hook/useCategory";
+import { useOrders } from "@/hook/useOrders";
+import TempleteOrder from "@/components/templete-order";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { createAxiosInstance } from "@/utils/axios";
 
-  console.log(categoryActive.category)
+export default function Item() {
+  const [items, setItems] = useState({ data: [] });
+  const [category, setCategory] = useState({ data: [] });
+
+  const fetchDataItem = async (category) => {
+    try {
+      const axiosInstance = createAxiosInstance();
+      const response = await axiosInstance.get(`/api/items`, {
+        params: {
+          category: category,
+        },
+      });
+      setItems(response.data);
+    } catch (error) {
+      console.error("Error fetching items:", error);
+    }
+  };
+
+  const fetchDataCategory = async () => {
+    try {
+      const axiosInstance = createAxiosInstance();
+      const response = await axiosInstance.get(`/api/category`);
+      setCategory(response.data);
+    } catch (error) {
+      console.error("Error fetching category:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchDataItem(null);
+    fetchDataCategory();
+  }, []);
+
+  const order = useOrders();
+  const categoryActive = useCategory();
+
+  const handleCategory = (data) => {
+    categoryActive.handleCategory(data);
+    fetchDataItem(categoryActive?.category);
+  };
+
+  const handleOrder = (data) => {
+    order.handleAddOrders({ ...data });
+  };
+
   return (
-    <TempleteOrder orders={order?.orders} category={category} handleActive={categoryActive.handleCategory}>
+    <TempleteOrder
+      orders={order?.orders || []}
+      category={category?.data || []}
+      handleActive={handleCategory}
+    >
       <div className=" text-center">
         <div className="row">
-          {items.map((d) => {
+          {items?.data.map((d, index) => {
             return (
               <div
                 className="card-item col-3 "
-                key={d.id}
-                onClick={() => order.handleOrders(d)}
+                key={index}
+                onClick={() => handleOrder(d)}
               >
                 <div className="fix-item-image">
                   <img
@@ -26,7 +76,7 @@ export default function Item({ items, category }) {
                     }}
                   />
                 </div>
-                <p className="card-text name-item">{d.name?.th}</p>
+                <p className="card-text name-item">{d?.th}</p>
               </div>
             );
           })}
@@ -34,33 +84,4 @@ export default function Item({ items, category }) {
       </div>
     </TempleteOrder>
   );
-}
-
-import TempleteOrder from "@/components/templete-order";
-import { useCategory } from "@/hook/useCategory";
-import { useOrders } from "@/hook/useOrders";
-import { useRouter } from "next/router";
-
-// import ServerSideAuth from "../lib/ServerSideAuth";
-import { dbClient } from "../lib/db";
-
-export async function getServerSideProps({ req, res }) {
-  // const userInfo = await ServerSideAuth({ req, res });
-  // if (!userInfo) {
-  //   return {};
-  // }
-
-  const category = await dbClient.query(
-    "SELECT * FROM category"
-  );
-
-  const items = await dbClient.query(
-    "SELECT * FROM items WHERE category = '75c7578d-cf43-45c7-8d5d-62dfd4e87257'"
-  );
-  return {
-    props: {
-      items: JSON.parse(JSON.stringify(items?.rows)),
-      category: JSON.parse(JSON.stringify(category?.rows))
-    },
-  };
 }

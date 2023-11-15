@@ -1,74 +1,59 @@
-import nextConnect from 'next-connect';
-
-import DatabaseMiddleware from '../../lib/db';
-// import APIAuth from '../../../../src/APIAuth';
+import nextConnect from "next-connect";
+import Item from "@/model/Item";
+import { connectToDatabase } from "@/utils/db";
 
 const handler = nextConnect();
-
-handler.use(DatabaseMiddleware);
-// handler.use(APIAuth);
-
-/* Get device detail */
-handler.get(async (req, res) => {
-    const deviceId = req.query.id;
-
-    let devices = await req.dbClient.query(
-        "SELECT * FROM general.devices WHERE id = $1 LIMIT 1;", 
-        [ 
-            deviceId
-        ]
-    );
-
-    devices = devices.rows[0];
-
-    res.status(200).json(devices);
+handler.use(async (req, res, next) => {
+  await connectToDatabase();
+  next();
 });
 
-/* Update device */
-handler.put(async (req, res) => {
-    const deviceId = req.query.id;
-
-    const deviceInfo = Object.assign(
-        { }, 
-        req.body
-    );
-
-    let fieldUpdate = [ ];
-
-    for (const fieldName of [
-        "name",
-        "description",
-        "eui",
-        "alert"
-    ]) {
-        if (typeof deviceInfo[fieldName] !== "undefined") {
-            fieldUpdate.push({ 
-                field: fieldName,
-                value: typeof deviceInfo[fieldName] !== "object" ? deviceInfo[fieldName] : JSON.stringify(deviceInfo[fieldName])
-            });
+handler.get(async (req, res) => {
+  try {
+    const { category, page = 1, limit = 10 } = req.query;
+    const query = category
+      ? {
+          category_id: category,
         }
+      : {};
+    const data = await Item.find(query)
+      .limit(limit)
+      .skip(limit * (page - 1));
+    res.status(200).json({
+      data: data,
+      page: page,
+      limit: limit,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching data" });
+  }
+});
+
+handler.post(async (req, res) => {
+  const data = req.body;
+  try {
+    const newItem = new Item({ ...data });
+    await newItem.save();
+    res.status(201).json(newItem);
+  } catch (error) {
+    res.status(500).json({ message: "Error inserting data" });
+  }
+});
+
+handler.delete(async (req, res) => {
+  const { id } = req.query;
+
+  try {
+    const deletedItem = await Item.findByIdAndDelete(id);
+
+    if (!deletedItem) {
+      return res.status(404).json({ error: "Item not found" });
     }
 
-    let updateDeviceInfo = await req.dbClient.query(
-        `UPDATE general.devices SET ${fieldUpdate.map((item, index) => item.field + " = $" + (index + 1)).join(", ")} WHERE id = $${fieldUpdate.length + 1};`,
-        fieldUpdate.map(item => item.value).concat([ deviceId ])
-    );
-
-    return res.status(200).json("OK");
-});
-
-/* Delete device */
-handler.delete(async (req, res) => {
-    const deviceId = req.query.id;
-
-    let deleteDeviceInfo = await req.dbClient.query(
-        "DELETE FROM general.devices WHERE id = $1;",
-        [
-            deviceId,
-        ]
-    );
-
-    return res.status(200).json("OK");
+    res.status(200).json({ message: "Item deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to delete item" });
+  }
 });
 
 export default handler;
