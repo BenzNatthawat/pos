@@ -34,6 +34,7 @@ async function seedData() {
         rus: "снеппер гриль",
         price: 350,
         category_id: category?.[0]._id,
+        img: "img_001.png",
       },
       {
         th: "ปลาทับทิมย่าง",
@@ -41,6 +42,7 @@ async function seedData() {
         rus: "Тилапия рыба гриль",
         price: 300,
         category_id: category?.[0]._id,
+        img: "img_002.png",
       },
       {
         th: "ปลากระพงทอดน้ำปลา",
@@ -48,6 +50,7 @@ async function seedData() {
         rus: "рыба жаренная снеппер политая рыбным соусом",
         price: 350,
         category_id: category?.[0]._id,
+        img: "img_003.png",
       },
       {
         th: "ปลาทับทิมทอดน้ำปลา",
@@ -55,6 +58,7 @@ async function seedData() {
         rus: "рыба жареная тилапия политая рыбным соусом",
         price: 300,
         category_id: category?.[0]._id,
+        img: "img_004.png",
       },
       {
         th: "ปลากระพงทอดกระเทียม",
@@ -62,6 +66,7 @@ async function seedData() {
         rus: "рыба жаренная снеппер с чесноком",
         price: 350,
         category_id: category?.[0]._id,
+        img: "img_005.png",
       },
       {
         th: "ปลาทับทิมทอดกระเทียม",
@@ -69,6 +74,7 @@ async function seedData() {
         rus: "рыба жареная тилапия с чесноком",
         price: 300,
         category_id: category?.[0]._id,
+        img: "img_006.png",
       },
       {
         th: "ปลากระพงนึ่งมะนาว",
@@ -76,6 +82,7 @@ async function seedData() {
         rus: "рыба жаренная снеппер на пару с лимономэ ",
         price: 350,
         category_id: category?.[0]._id,
+        img: "img_007.png",
       },
       {
         th: "ปลาทับทิมนึ่งมะนาว",
@@ -83,6 +90,7 @@ async function seedData() {
         rus: "рыба жареная тилапия на пару с лимоном",
         price: 300,
         category_id: category?.[0]._id,
+        img: "img_008.png",
       },
       {
         th: "ปลากระพงสามรส",
@@ -90,6 +98,7 @@ async function seedData() {
         rus: "рыба жаренная снеппер с 3 видами соуса (сладкий,кислый,острый смесь) соус можно отдельно",
         price: 350,
         category_id: category?.[0]._id,
+        img: "img_009.png",
       },
       {
         th: "ปลากระพงแกงส้ม",
@@ -97,6 +106,7 @@ async function seedData() {
         rus: "Кислое карри с рыба сибасом",
         price: 250,
         category_id: category?.[0]._id,
+        img: "img_010.png",
       },
       {
         th: "ปลาทับทิมแกงส้ม",
@@ -104,6 +114,7 @@ async function seedData() {
         rus: "кислый карри с рыба тилапия",
         price: 250,
         category_id: category?.[0]._id,
+        img: "img_011.png",
       },
       {
         th: "ปลากระพงราดพริก (น้ำจิ้มแจ๋ว)",
@@ -111,6 +122,7 @@ async function seedData() {
         rus: "жаренная рыба сибасом с соусом Чили (острый соус)",
         price: 350,
         category_id: category?.[0]._id,
+        img: "img_012.png",
       },
       {
         th: "ปลาทับทิมราดพริก  (น้ำจิ้มแจ๋ว)",
@@ -118,6 +130,7 @@ async function seedData() {
         rus: "жаренная рыба тилапия с соусом Чили (острый соус)",
         price: 300,
         category_id: category?.[0]._id,
+        img: "img_013.png",
       },
       {
         th: "ปลากระพงนึ่งซีอิ๋ว",
@@ -125,6 +138,7 @@ async function seedData() {
         rus: "рыба сибасом на пару в соевом соусе",
         price: 350,
         category_id: category?.[0]._id,
+        img: "img_014.png",
       },
       {
         th: "ปลาทับทิมนึ่งซีอิ๋ว",
@@ -132,6 +146,7 @@ async function seedData() {
         rus: "рыба тилапия на пару в соевом соусе",
         price: 300,
         category_id: category?.[0]._id,
+        img: "img_015.png",
       },
       {
         th: "ปลากระพงผัดพริกแกง",
@@ -139,6 +154,7 @@ async function seedData() {
         rus: "рыба сибасом жаренная кусочками с чёрным перцем",
         price: 350,
         category_id: category?.[0]._id,
+        img: "img_016.png",
       },
       {
         th: "ปลาทับทิมผัดพริกแกง",
@@ -146,6 +162,7 @@ async function seedData() {
         rus: "рыба тилапия жаренная кусочками с чёрным перцем",
         price: 300,
         category_id: category?.[0]._id,
+        img: "img_017.png",
       },
       {
         th: "ปลากระพงผัดพริกไทยดำ",
@@ -153,21 +170,15 @@ async function seedData() {
         rus: "рыба сибасом жаренная кусочками с пастой Чили",
         price: 300,
         category_id: category?.[0]._id,
+        img: "img_018.png",
       },
-      {
-        th: "ปลาทับทิมผัดพริกไทยดำ",
-        en: "Deep-Fried Tilapia Fish with Black Pepper",
-        rus: "рыба тилапия жаренная кусочками с пастой Чили",
-        price: 300,
-        category_id: category?.[0]._id,
-      },
-
       {
         th: "กุ้งเผา",
         en: "Grilled Shrimp",
         rus: "креветки-гриль",
         price: 350,
         category_id: category?.[1]._id,
+        img: "img_019.png",
       },
       {
         th: "กุ้งชุปแป้งทอด",
@@ -175,6 +186,7 @@ async function seedData() {
         rus: "Жареные креветки",
         price: 150,
         category_id: category?.[1]._id,
+        img: "img_020.png",
       },
       {
         th: "กุ้งทอดกระเทียม",
@@ -182,6 +194,7 @@ async function seedData() {
         rus: "креветки жаренные с чесноком",
         price: 150,
         category_id: category?.[1]._id,
+        img: "img_021.png",
       },
       {
         th: "กุ้งอบเกลือ",
@@ -189,6 +202,7 @@ async function seedData() {
         rus: "креветки запечённые в соли",
         price: 280,
         category_id: category?.[1]._id,
+        img: "img_022.png",
       },
       {
         th: "กุ้งอบวุ้นเส้น",
@@ -196,6 +210,7 @@ async function seedData() {
         rus: "Запеченные креветки со стеклянной лапшой",
         price: 180,
         category_id: category?.[1]._id,
+        img: "img_023.png",
       },
       {
         th: "ทอดมันกุ้ง",
@@ -203,6 +218,7 @@ async function seedData() {
         rus: "Жареные креветки во фритюре",
         price: 180,
         category_id: category?.[1]._id,
+        img: "img_024.png",
       },
       {
         th: "กุ้งแช่น้ำปลา",
@@ -210,6 +226,7 @@ async function seedData() {
         rus: "креветки маринованные в рыбном соусе подаются с отдельными соусами (термически не обработанные)",
         price: 200,
         category_id: category?.[1]._id,
+        img: "img_025.png",
       },
       {
         th: "กุ้งผัดซอสมะขาม",
@@ -217,6 +234,7 @@ async function seedData() {
         rus: "креветки жаренные с тамариновым соусом",
         price: 150,
         category_id: category?.[1]._id,
+        img: "img_026.png",
       },
       {
         th: "กุ้งผัดพริกเผา",
@@ -224,6 +242,7 @@ async function seedData() {
         rus: "креветки жаренные с пастой чили",
         price: 180,
         category_id: category?.[1]._id,
+        img: "img_027.png",
       },
       {
         th: "กุ้งโสร่ง",
@@ -231,6 +250,7 @@ async function seedData() {
         rus: "Креветки, завернутые во фритюр, с лапшой",
         price: 150,
         category_id: category?.[1]._id,
+        img: "img_028.png",
       },
       {
         th: "กุ้งคั่วพริกเกลือ",
@@ -238,6 +258,7 @@ async function seedData() {
         rus: "Жареные креветки с чили и солью",
         price: 180,
         category_id: category?.[1]._id,
+        img: "img_029.png",
       },
       {
         th: "ต้มยำกุ้ง",
@@ -245,14 +266,15 @@ async function seedData() {
         rus: "том-ям с креветки",
         price: 160,
         category_id: category?.[1]._id,
+        img: "img_030.png",
       },
-
       {
         th: "ปลาหมึกย่าง",
         en: "Grilled Squid",
         rus: "кальмар-гриль",
         price: 250,
         category_id: category?.[2]._id,
+        img: "img_031.png",
       },
       {
         th: "ปลาหมึกทอดกระเทียม",
@@ -260,6 +282,7 @@ async function seedData() {
         rus: "кальмар-гриль с чесноком",
         price: 150,
         category_id: category?.[2]._id,
+        img: "img_032.png",
       },
       {
         th: "ปลาหมึกนึ่งมะนาว",
@@ -267,6 +290,7 @@ async function seedData() {
         rus: "кальмар на пару с лимоном",
         price: 180,
         category_id: category?.[2]._id,
+        img: "img_033.png",
       },
       {
         th: "ปลาหมึกชุปแป้งทอด",
@@ -274,6 +298,7 @@ async function seedData() {
         rus: "Жареный кальмар",
         price: 150,
         category_id: category?.[2]._id,
+        img: "img_034.png",
       },
       {
         th: "ปลาหมึกผัดไข่เค็ม",
@@ -281,6 +306,7 @@ async function seedData() {
         rus: "Жареный кальмар с соленым яйцом",
         price: 150,
         category_id: category?.[2]._id,
+        img: "img_035.png",
       },
       {
         th: "ปลาหมึกผัดผงกะหรี่",
@@ -288,6 +314,7 @@ async function seedData() {
         rus: "кальмар жаренный с карри-мукой",
         price: 150,
         category_id: category?.[2]._id,
+        img: "img_036.png",
       },
       {
         th: "ปลาหมึกผัดพริกเผา",
@@ -295,6 +322,7 @@ async function seedData() {
         rus: "кальмар жаренный с Соус-чили",
         price: 150,
         category_id: category?.[2]._id,
+        img: "img_037.png",
       },
       {
         th: "ปลาหมึกผัดพริกไทยดำ",
@@ -302,13 +330,7 @@ async function seedData() {
         rus: "кальмар жареный с черным перцем",
         price: 150,
         category_id: category?.[2]._id,
-      },
-      {
-        th: "ปลาหมึกผัดผัดกระเพรา",
-        en: "Stir-Fried Squid with Basil",
-        rus: "Жареный кальмар с базиликом",
-        price: 150,
-        category_id: category?.[2]._id,
+        img: "img_038.png",
       },
       {
         th: "ปลาหมึกต้ม",
@@ -316,14 +338,15 @@ async function seedData() {
         rus: "вареный кальмар",
         price: 160,
         category_id: category?.[2]._id,
+        img: "img_039.png",
       },
-
       {
         th: "ปูนึ่ง",
         en: "Steamed Crab",
         rus: "краб на пару",
         price: 200,
         category_id: category?.[3]._id,
+        img: "img_040.png",
       },
       {
         th: "ปูเผา",
@@ -331,6 +354,7 @@ async function seedData() {
         rus: "краб-гриль",
         price: 200,
         category_id: category?.[3]._id,
+        img: "img_041.png",
       },
       {
         th: "ปูผัดพริกไทยดำ",
@@ -338,6 +362,7 @@ async function seedData() {
         rus: "краб жаренный с чёрным перцем",
         price: 250,
         category_id: category?.[3]._id,
+        img: "img_042.png",
       },
       {
         th: "ปูผัดผงกะหรี่",
@@ -345,6 +370,7 @@ async function seedData() {
         rus: "жаренный краб с карри-мукой",
         price: 250,
         category_id: category?.[3]._id,
+        img: "img_043.png",
       },
       {
         th: "ปูผัดน้ำพริกเผา",
@@ -352,14 +378,15 @@ async function seedData() {
         rus: "жаренный краб с пастой Чили",
         price: 250,
         category_id: category?.[3]._id,
+        img: "img_044.png",
       },
-
       {
         th: "ไก่ผัดเม็ดมะม่วง",
         en: "Stir-Fried Chicken with Cashew Nuts (Not spicy)",
         rus: "цыпленок жареный с орехами кешью (не острый)",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_045.png",
       },
       {
         th: "ไก่ผัดกระเพรา",
@@ -367,6 +394,7 @@ async function seedData() {
         rus: "курица жареная с базиликом",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_046.png",
       },
       {
         th: "ไก่ทอดกระเทียม",
@@ -374,6 +402,7 @@ async function seedData() {
         rus: "курица жаренная с чесноком",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_047.png",
       },
       {
         th: "แกงเขียวหวานไก่",
@@ -381,6 +410,7 @@ async function seedData() {
         rus: "зелёный карри с курицей",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_048.png",
       },
       {
         th: "ต้มข่าไก่",
@@ -388,6 +418,7 @@ async function seedData() {
         rus: "том-ка с курицей",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_049.png",
       },
       {
         th: "ต้มยำไก่",
@@ -395,6 +426,7 @@ async function seedData() {
         rus: "том-ям с курицей",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_050.png",
       },
       {
         th: "แกงมัสมั่น",
@@ -402,6 +434,7 @@ async function seedData() {
         rus: "красный карри с курицей",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_051.png",
       },
       {
         th: "แกงจืด",
@@ -409,6 +442,7 @@ async function seedData() {
         rus: "суп с тофу на выбор курица и овощами",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_052.png",
       },
       {
         th: "ต้มแซ่บ",
@@ -416,6 +450,7 @@ async function seedData() {
         rus: "том-сэб (как том-ям,но перец Чили добавляют сухой)",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_053.png",
       },
       {
         th: "ไก่ผัดพริกเผา ",
@@ -423,6 +458,7 @@ async function seedData() {
         rus: "цыпленок жареный  с пастой чили",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_054.png",
       },
       {
         th: "ไก่ผัดน้ำมันหอย",
@@ -430,14 +466,15 @@ async function seedData() {
         rus: "Жареная курица с устричным соусом",
         price: 150,
         category_id: category?.[4]._id,
+        img: "img_055.png",
       },
-
       {
         th: "ผัดผัก",
         en: "Stir-Fried Mix Vegetables",
         rus: "Жареная смесь овощей",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_056.png",
       },
       {
         th: "ผัดเห็ดเข็มทอง",
@@ -445,6 +482,7 @@ async function seedData() {
         rus: "жаренные мелкие местные белые грибы(золотая игла)",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_057.png",
       },
       {
         th: "ผัดผักกระเฉดไฟแดง",
@@ -452,6 +490,7 @@ async function seedData() {
         rus: "Жареная мимоза (на сильном огне)",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_058.png",
       },
       {
         th: "ผัดผักบุ้งไฟแดง",
@@ -459,6 +498,7 @@ async function seedData() {
         rus: "Жареная ипомея (на сильном огне)",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_059.png",
       },
       {
         th: "ผัดคะน้ากุ้งสด",
@@ -466,6 +506,7 @@ async function seedData() {
         rus: "жаренная китайская капуста с креветками",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_060.png",
       },
       {
         th: "ผัดคะน้าปลาเค็ม",
@@ -473,6 +514,7 @@ async function seedData() {
         rus: "жаренная китайская капуста с солёной сухой рыбой",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_061.png",
       },
       {
         th: "ผักเหมียงผัดไข่",
@@ -480,6 +522,7 @@ async function seedData() {
         rus: "местная жаренная трава жаренная с яйцом(нужно попробовать )",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_062.png",
       },
       {
         th: "ถั่วงอกผัดน้ำมันหอย",
@@ -487,6 +530,7 @@ async function seedData() {
         rus: "жареные ростки фасоли с устричным соусом",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_063.png",
       },
       {
         th: "ต้นอ่อนทานตะวันผัดน้ำมันหอย",
@@ -494,6 +538,7 @@ async function seedData() {
         rus: "жареные ростки подсолнуха с устричным соусом",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_064.png",
       },
       {
         th: "กะหล่ำปลีผัดน้ำมันหอย",
@@ -501,6 +546,7 @@ async function seedData() {
         rus: "жареные капуста фасоли с устричным соусом",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_065.png",
       },
       {
         th: "บล็อคโคลี่ผัดน้ำมันหอย",
@@ -508,14 +554,15 @@ async function seedData() {
         rus: "жареная брокколи с устричным соусом.",
         price: 100,
         category_id: category?.[5]._id,
+        img: "img_066.png",
       },
-
       {
         th: "ข้าวผัดกุ้ง",
         en: "Fried Rice with Shrimp",
         rus: "жареный рис с креветками",
         price: 120,
         category_id: category?.[6]._id,
+        img: "img_067.png",
       },
       {
         th: "ข้าวผัดไก่",
@@ -523,6 +570,7 @@ async function seedData() {
         rus: "жареный рис с курицей",
         price: 120,
         category_id: category?.[6]._id,
+        img: "img_068.png",
       },
       {
         th: "ข้าวผัดหมึก",
@@ -530,6 +578,7 @@ async function seedData() {
         rus: "жареный рис с кальмарами",
         price: 120,
         category_id: category?.[6]._id,
+        img: "img_069.png",
       },
       {
         th: "ข้าวผัดกระเพรา (ไก่, กุ้ง, ปลาหมึก, ซีฟู๊ด)",
@@ -537,6 +586,7 @@ async function seedData() {
         rus: "жаренный рис с базиликом(курица,креветки,кальмар или морепродукты)",
         price: 150,
         category_id: category?.[6]._id,
+        img: "img_070.png",
       },
       {
         th: "ข้าวผัดเขียวหวาน (ไก่, ปลา)",
@@ -544,6 +594,7 @@ async function seedData() {
         rus: "жаренный рис с зелёным карри (курица или рыба)",
         price: 120,
         category_id: category?.[6]._id,
+        img: "img_071.png",
       },
       {
         th: "ข้าวผัดสัปรด",
@@ -551,6 +602,7 @@ async function seedData() {
         rus: "жаренный рис с ананасом",
         price: 150,
         category_id: category?.[6]._id,
+        img: "img_072.png",
       },
       {
         th: "ข้าวผัดกระเทียมพริกไทย",
@@ -558,6 +610,7 @@ async function seedData() {
         rus: "жаренный рис с чесноком",
         price: 100,
         category_id: category?.[6]._id,
+        img: "img_073.png",
       },
       {
         th: "ข้าวผัดน้ำพริกเผา",
@@ -565,6 +618,7 @@ async function seedData() {
         rus: "жареный рис с пастой чили",
         price: 120,
         category_id: category?.[6]._id,
+        img: "img_074.png",
       },
       {
         th: "ข้าวผัดเครื่องแกง (กุ้ง, ปลา, ซีฟู๊ด, ไก่)",
@@ -572,6 +626,7 @@ async function seedData() {
         rus: "жаренный рис с красным карри(креветки ,рыба или морепродукты )",
         price: 120,
         category_id: category?.[6]._id,
+        img: "img_075.png",
       },
       {
         th: "ข้าวสวย",
@@ -579,6 +634,7 @@ async function seedData() {
         rus: "варенный рис",
         price: 20,
         category_id: category?.[6]._id,
+        img: "img_076.png",
       },
       {
         th: "ข้าวผัดต้มยำ",
@@ -586,14 +642,15 @@ async function seedData() {
         rus: "Том Ям жареный рис",
         price: 120,
         category_id: category?.[6]._id,
+        img: "img_077.png",
       },
-
       {
         th: "ผัดก๋วยเตี๋ยวไก่",
         en: "Stir-Fried Noodles with Chicken (Wide Rice Noodles)",
         rus: "жаренная лапша с курица (крупная )",
         price: 150,
         category_id: category?.[7]._id,
+        img: "img_078.png",
       },
       {
         th: "ผัดก๋วยเตี๋ยวกุ้ง",
@@ -601,6 +658,7 @@ async function seedData() {
         rus: "жаренная лапша с креветка (крупная )",
         price: 150,
         category_id: category?.[7]._id,
+        img: "img_079.png",
       },
       {
         th: "ผัดบะหมี่เหลือง",
@@ -608,6 +666,7 @@ async function seedData() {
         rus: "жаренная жёлтая лапша",
         price: 120,
         category_id: category?.[7]._id,
+        img: "img_080.png",
       },
       {
         th: "สปาเก็ตตี้เนย",
@@ -615,6 +674,7 @@ async function seedData() {
         rus: "cпагетти со сливочным маслом",
         price: 120,
         category_id: category?.[7]._id,
+        img: "img_081.png",
       },
       {
         th: "สปาเก็ตตี้เนยไก่",
@@ -622,6 +682,7 @@ async function seedData() {
         rus: "cпагетти с курицей и маслом",
         price: 120,
         category_id: category?.[7]._id,
+        img: "img_082.png",
       },
       {
         th: "สปาเก็ตตี้เนยกุ้ง",
@@ -629,6 +690,7 @@ async function seedData() {
         rus: "cпагетти с креветками и сливочным маслом",
         price: 150,
         category_id: category?.[7]._id,
+        img: "img_083.png",
       },
       {
         th: "ผัดวุ้นเส้น",
@@ -636,6 +698,7 @@ async function seedData() {
         rus: "жаренная стеклянная лапша",
         price: 150,
         category_id: category?.[7]._id,
+        img: "img_084.png",
       },
       {
         th: "ผัดไทไก่",
@@ -643,6 +706,7 @@ async function seedData() {
         rus: "пад-тай с курица ",
         price: 150,
         category_id: category?.[7]._id,
+        img: "img_085.png",
       },
       {
         th: "ผัดไทกุ้งสด",
@@ -650,6 +714,7 @@ async function seedData() {
         rus: "пад-тай с креветками",
         price: 150,
         category_id: category?.[7]._id,
+        img: "img_086.png",
       },
       {
         th: "ผัดไทซีฟู๊ด",
@@ -657,6 +722,7 @@ async function seedData() {
         rus: "пад-тай с морепродуктами",
         price: 150,
         category_id: category?.[7]._id,
+        img: "img_087.png",
       },
       {
         th: "ผัดบะหมี่ี่กึ่งสำเร็จรูป",
@@ -664,14 +730,15 @@ async function seedData() {
         rus: "жареная лапша быстрого приготовления с устричным соусом.",
         price: 100,
         category_id: category?.[7]._id,
+        img: "img_088.png",
       },
-
       {
         th: "ยำซีฟู๊ด",
         en: "Seafood Salad",
         rus: "салат из морепродуктов",
         price: 150,
         category_id: category?.[8]._id,
+        img: "img_089.png",
       },
       {
         th: "ยำวุ้นเส้นไก่",
@@ -679,6 +746,7 @@ async function seedData() {
         rus: "стакан Салат с курицей",
         price: 150,
         category_id: category?.[8]._id,
+        img: "img_090.png",
       },
       {
         th: "ยำวุ้นเส้นกุ้ง",
@@ -686,6 +754,7 @@ async function seedData() {
         rus: "стакан Салат с креветками",
         price: 150,
         category_id: category?.[8]._id,
+        img: "img_091.png",
       },
       {
         th: "ยำผักกูด",
@@ -693,6 +762,7 @@ async function seedData() {
         rus: "острый овощной салат",
         price: 150,
         category_id: category?.[8]._id,
+        img: "img_092.png",
       },
       {
         th: "ยำข้าวโพด",
@@ -700,6 +770,7 @@ async function seedData() {
         rus: "острый кукурузный салат",
         price: 150,
         category_id: category?.[8]._id,
+        img: "img_093.png",
       },
       {
         th: "ยำมะม่วง",
@@ -707,14 +778,15 @@ async function seedData() {
         rus: "салат из манго",
         price: 120,
         category_id: category?.[8]._id,
+        img: "img_094.png",
       },
-
       {
         th: "เฟรนฟาย",
         en: "French Fries",
         rus: "картофель-фри",
         price: 100,
         category_id: category?.[9]._id,
+        img: "img_095.png",
       },
       {
         th: "นักเก็ตไก่",
@@ -722,6 +794,7 @@ async function seedData() {
         rus: "самородки",
         price: 100,
         category_id: category?.[9]._id,
+        img: "img_096.png",
       },
       {
         th: "ขนมปังทอดเนย",
@@ -729,6 +802,7 @@ async function seedData() {
         rus: "масло хлеб",
         price: 100,
         category_id: category?.[9]._id,
+        img: "img_097.png",
       },
       {
         th: "ขนมปังทอดกระเทียม",
@@ -736,6 +810,7 @@ async function seedData() {
         rus: "чесночный хлеб",
         price: 100,
         category_id: category?.[9]._id,
+        img: "img_098.png",
       },
       {
         th: "หัวหอมทอด",
@@ -743,6 +818,7 @@ async function seedData() {
         rus: "луковые кольца",
         price: 100,
         category_id: category?.[9]._id,
+        img: "img_099.png",
       },
       {
         th: "เห็ดทอด",
@@ -750,6 +826,7 @@ async function seedData() {
         rus: "хрустящий гриб",
         price: 100,
         category_id: category?.[9]._id,
+        img: "img_100.png",
       },
       {
         th: "เกี๊ยวทอด",
@@ -757,6 +834,7 @@ async function seedData() {
         rus: "жареные пельмени",
         price: 100,
         category_id: category?.[9]._id,
+        img: "img_101.png",
       },
       {
         th: "ปีกไก่ทอด",
@@ -764,6 +842,7 @@ async function seedData() {
         rus: "жареные куриные крылышки",
         price: 100,
         category_id: category?.[9]._id,
+        img: "img_102.png",
       },
       {
         th: "ซุปเห็ด",
@@ -771,6 +850,7 @@ async function seedData() {
         rus: "грибной крем-суп",
         price: 120,
         category_id: category?.[9]._id,
+        img: "img_103.png",
       },
       {
         th: "ซุุปข้าวโพด",
@@ -778,6 +858,7 @@ async function seedData() {
         rus: "кукурузный крем-суп",
         price: 120,
         category_id: category?.[9]._id,
+        img: "img_104.png",
       },
       {
         th: "เกี๊ยว",
@@ -785,6 +866,127 @@ async function seedData() {
         rus: "Пельмени",
         price: 120,
         category_id: category?.[9]._id,
+        img: "img_105.png",
+      },
+      {
+        th: "ไข่เจียว",
+        en: "omelet",
+        rus: "омлет",
+        price: 100,
+        category_id: category?.[11]._id,
+        img: "img_117.png",
+      },
+      {
+        th: "ไข่เจียวไก่",
+        en: "chicken omelet",
+        rus: "куриный омлет",
+        price: 150,
+        category_id: category?.[11]._id,
+        img: "img_118.png",
+      },
+      {
+        th: "ไข่เจียวปู",
+        en: "crab Omelet",
+        rus: "крабовый омлет",
+        price: 150,
+        category_id: category?.[11]._id,
+        img: "img_119.png",
+      },
+      {
+        th: "ไข่เจียวปููอัด",
+        en: "crab Stick Omelet",
+        rus: "крабовые палочки омлет",
+        price: 100,
+        category_id: category?.[11]._id,
+        img: "img_120.png",
+      },
+      {
+        th: "ไข่เจียวซีฟู้ด",
+        en: "seafood Omelet",
+        rus: "омлет из морепродуктов",
+        price: 150,
+        category_id: category?.[11]._id,
+        img: "img_121.png",
+      },
+      {
+        th: "สลัดผัก",
+        en: "Mix Salad",
+        rus: "Микс-салат",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_107.png",
+      },
+      {
+        th: "สลัดผลไม้",
+        en: "Fruit Salad",
+        rus: "Фруктовый салат",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_108.png",
+      },
+      {
+        th: "สลัดกุ้ง",
+        en: "Shrimp Salad",
+        rus: "Салат с креветками",
+        price: 120,
+        category_id: category?.[12]._id,
+        img: "img_109.png",
+      },
+      {
+        th: "สลัดไก่กรอบ",
+        en: "Crispy Chicken Salad",
+        rus: "Салат с хрустящей курицей",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_110.png",
+      },
+      {
+        th: "สลัดอกไก่",
+        en: "Chicken Breast Salad",
+        rus: "Салат с куриной грудкой",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_111.png",
+      },
+      {
+        th: "สลัดอกไก่พริกไทยดำ",
+        en: "Black Pepper Chicken Breast Salad",
+        rus: "Салат из куриной грудки с черным перцем",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_112.png",
+      },
+      {
+        th: "สลัดไข่ต้ม ",
+        en: "Boiled Egg Salad",
+        rus: "Салат из вареных яиц",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_113.png",
+      },
+      {
+        th: "สลัดซีซาร์",
+        en: "Caesar salad",
+        rus: "Салат Цезарь",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_114.png",
+      },
+      {
+        th: "สลัดปูอัด",
+        en: "Crab Stick Salad",
+        rus: "Салат из крабовых палочек",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_115.png",
+      },
+      {
+        th: "สลัดโรลปูอัด",
+        en: "Crab Stick Salad Roll with Spicy Seafood Mayonnaise",
+        rus: "Салатный рулет из крабовых палочек с пикантным майонезом из морепродуктов",
+        price: 100,
+        category_id: category?.[12]._id,
+        img: "img_116.png",
       },
       {
         th: "ไก่ผสมมันบดทอด",
@@ -792,6 +994,7 @@ async function seedData() {
         rus: "котлеты",
         price: 120,
         category_id: category?.[9]._id,
+        img: "img_106.png",
       },
       {
         th: "มันฝรั่งบด",
@@ -799,6 +1002,7 @@ async function seedData() {
         rus: "картошка пюре",
         price: 120,
         category_id: category?.[9]._id,
+        img: "img_107.png",
       },
       {
         th: "ซุปบอร์ชท์",
@@ -806,8 +1010,8 @@ async function seedData() {
         rus: "суп Борщ",
         price: 120,
         category_id: category?.[9]._id,
+        img: "img_108.png",
       },
-
       {
         th: "น้ำเปล่า",
         en: "Mineral Water",
@@ -947,113 +1151,6 @@ async function seedData() {
         rus: "спрайт",
         price: 40,
         category_id: category?.[10]._id,
-      },
-
-      {
-        th: "ไข่เจียว",
-        en: "omelet",
-        rus: "омлет",
-        price: 100,
-        category_id: category?.[11]._id,
-      },
-      {
-        th: "ไข่เจียวไก่",
-        en: "chicken omelet",
-        rus: "куриный омлет",
-        price: 150,
-        category_id: category?.[11]._id,
-      },
-      {
-        th: "ไข่เจียวปู",
-        en: "crab Omelet",
-        rus: "крабовый омлет",
-        price: 150,
-        category_id: category?.[11]._id,
-      },
-      {
-        th: "ไข่เจียวปููอัด",
-        en: "crab Stick Omelet",
-        rus: "крабовые палочки омлет",
-        price: 100,
-        category_id: category?.[11]._id,
-      },
-      {
-        th: "ไข่เจียวซีฟู้ด",
-        en: "seafood Omelet",
-        rus: "омлет из морепродуктов",
-        price: 150,
-        category_id: category?.[11]._id,
-      },
-
-      {
-        th: "สลัดผัก",
-        en: "Mix Salad",
-        rus: "Микс-салат",
-        price: 100,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดผลไม้",
-        en: "Fruit Salad",
-        rus: "Фруктовый салат",
-        price: 100,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดกุ้ง",
-        en: "Shrimp Salad",
-        rus: "Салат с креветками",
-        price: 120,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดไก่กรอบ",
-        en: "Crispy Chicken Salad",
-        rus: "Салат с хрустящей курицей",
-        price: 100,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดอกไก่",
-        en: "Chicken Breast Salad",
-        rus: "Салат с куриной грудкой",
-        price: 100,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดอกไก่พริกไทยดำ",
-        en: "Black Pepper Chicken Breast Salad",
-        rus: "Салат из куриной грудки с черным перцем",
-        price: 100,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดไข่ต้ม ",
-        en: "Boiled Egg Salad",
-        rus: "Салат из вареных яиц",
-        price: 100,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดซีซาร์",
-        en: "Caesar salad",
-        rus: "Салат Цезарь",
-        price: 100,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดปูอัด",
-        en: "Crab Stick Salad",
-        rus: "Салат из крабовых палочек",
-        price: 100,
-        category_id: category?.[12]._id,
-      },
-      {
-        th: "สลัดโรลปูอัด",
-        en: "Crab Stick Salad Roll with Spicy Seafood Mayonnaise",
-        rus: "Салатный рулет из крабовых палочек с пикантным майонезом из морепродуктов",
-        price: 100,
-        category_id: category?.[12]._id,
       },
     ];
     await Item.insertMany(itemsToSeed);

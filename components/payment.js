@@ -1,8 +1,26 @@
+import { useState } from "react";
 import dayjs from "dayjs";
 import { useRef } from "react";
 import ReactDOMServer from "react-dom/server";
 
-export default function Print({ orders }) {
+export default function Payment({ orders }) {
+  const [showModal, setShowModal] = useState(false);
+  const [cash, setCash] = useState(0);
+
+  const openPaymentModal = () => {
+    if (orders.length > 0) {
+      setShowModal(true);
+    }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const handleCash = (cash) => {
+    setCash(pre => pre + cash)
+  };
+
   const iframeRef = useRef(null);
   var html = (
     <html>
@@ -89,10 +107,27 @@ export default function Print({ orders }) {
             <td colSpan="3">- - - - - - - - - - - - - - - - - - - -</td>
           </tr>
 
-          <tr style={{ fontWeight: 600, fontSize: "0.8rem" }}>
+          <tr>
             <td colSpan="2">Amount</td>
             <td className="text-end">
               {orders.reduce(
+                (sum, order) => sum + order.price * order.amount,
+                0
+              )}
+            </td>
+          </tr>
+
+          <tr>
+            <td colSpan="2">Cash</td>
+            <td className="text-end">
+              {cash}
+            </td>
+          </tr>
+
+          <tr>
+            <td colSpan="2">Change</td>
+            <td className="text-end">
+              {cash - orders.reduce(
                 (sum, order) => sum + order.price * order.amount,
                 0
               )}
@@ -131,11 +166,38 @@ export default function Print({ orders }) {
       <button
         type="button"
         className="btn btn-primary"
-        onClick={printContent}
+        onClick={openPaymentModal}
         disabled={orders.length <= 0}
       >
-        <i className="bi bi-printer-fill"></i> พิมพ์
+        <i className="bi bi-cash-coin"></i> ชำระเงิน
       </button>
+
+      <div className={`modal ${showModal ? 'show' : ''}`} id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden={!showModal}>
+        <div cla="modal-dialog modal-dialog-centered" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLongTitle">ชำระเงิน</h5>
+              <button type="button" className="btn-close" aria-label="Close" onClick={closeModal}></button>
+            </div>
+            <div className="modal-body">
+              <button type="button" className="btn btn-light" onClick={() => handleCash(1000)}>1000</button>
+              <button type="button" className="btn btn-light" onClick={() => handleCash(500)}>500</button>
+              <button type="button" className="btn btn-light" onClick={() => handleCash(100)}>100</button>
+
+              ยอดชำระ {orders.reduce(
+                (sum, order) => sum + order.price * order.amount,
+                0
+              )}
+              เงิน {cash}
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" onClick={closeModal}>ปิด</button>
+              <button type="button" className="btn btn-primary" onClick={printContent}>ชำระเงิน</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <iframe
         ref={iframeRef}
         style={{ display: "none" }}

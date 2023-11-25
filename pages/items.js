@@ -1,9 +1,9 @@
 import { useCategory } from "@/hook/useCategory";
 import { useOrders } from "@/hook/useOrders";
 import TempleteOrder from "@/components/templete-order";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { createAxiosInstance } from "@/utils/axios";
+import CustomImage from "@/components/customImage";
 
 export default function Item() {
   const [items, setItems] = useState({ data: [] });
@@ -42,8 +42,9 @@ export default function Item() {
   const categoryActive = useCategory();
 
   const handleCategory = (data) => {
+    console.log(data)
     categoryActive.handleCategory(data);
-    fetchDataItem(categoryActive?.category);
+    fetchDataItem(data);
   };
 
   const handleOrder = (data) => {
@@ -61,19 +62,18 @@ export default function Item() {
           {items?.data.map((d, index) => {
             return (
               <div
-                className="card-item col-3 "
-                key={index}
+                className="card-item col-sm-12 col-md-6 col-lg-3"
+                key={d._id}
                 onClick={() => handleOrder(d)}
               >
-                <div className="fix-item-image">
-                  <img
+                <div className="item-image">
+                  <CustomImage
                     src={`/images/${d?.img}`}
-                    className="img-fluid"
-                    alt={d.name?.th}
-                    onError={({ currentTarget }) => {
-                      currentTarget.onerror = null; // prevents looping
-                      currentTarget.src = `/images/image-error.jpg`;
-                    }}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    className="image"
+                    alt={d?.th}
                   />
                 </div>
                 <p className="card-text name-item">{d?.th}</p>

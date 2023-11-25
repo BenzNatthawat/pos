@@ -8,8 +8,41 @@
   padding: 0;
 }
 
-.fix-item-image {
+.item-image {
   height: 160px;
   overflow: hidden;
   object-fit: cover;
+  position: relative; /* Ensure positioning context for absolute positioning of children */
 }
+
+.order-image {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative; /* Ensure positioning context for absolute positioning of children */
+}
+
+.card {
+  margin: 4px;
+  .card-body {
+    padding: 0px;
+  }
+}
+
+.modal.show {
+  display: block;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.max-w-max {
+  max-width: max-content;
+}
+
+.w-inherit {
+  width: inherit;
+}
+

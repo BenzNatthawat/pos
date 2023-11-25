@@ -17,6 +17,9 @@ const ItemSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    img: {
+      type: String,
+    },
     category_id: {
       type: ObjectId,
       required: true,
